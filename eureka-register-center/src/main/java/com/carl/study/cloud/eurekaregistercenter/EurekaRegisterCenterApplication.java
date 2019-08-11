@@ -9,7 +9,7 @@ public class EurekaRegisterCenterApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EurekaRegisterCenterApplication.class, args);
-        System.out.println(StringUtils.isBlank(""));
+        System.out.println("register center start...");
     }
 
 }

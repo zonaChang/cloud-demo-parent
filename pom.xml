@@ -22,7 +22,11 @@
     </properties>
 
     <modules>
-         <module>eureka-register-center</module>
+        <module>eureka-register-center</module>
+        <module>eureka-provider</module>
+        <module>eureka-consumer</module>
+        <module>zuul</module>
+        <module>project-basic</module>
     </modules>
 
     <dependencies>
