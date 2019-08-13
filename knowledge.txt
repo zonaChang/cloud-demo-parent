@@ -1,5 +1,9 @@
+===============参考资料=================
+https://projects.spring.io/spring-cloud/spring-cloud.html#_prefer_ip_address
+
 ===============配置参考类=================
 com.netflix.client.config.CommonClientConfigKey
+org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean
 
 ===============常用地址====================
 .eureka注册中心地址: http://localhost:8081/eureka/
