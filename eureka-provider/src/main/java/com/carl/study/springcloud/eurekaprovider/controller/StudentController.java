@@ -47,6 +47,11 @@ public class StudentController {
     @PostMapping("/modify")
     public Object modifyStudent(@RequestBody Student student){
         log.info(PREFIX+"into modify student={}", student);
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         student.setName(student.getName() + "---modify"+RandomUtil.randomInt(20));
         log.info(PREFIX+"out modify student={}", student);
         return student;
