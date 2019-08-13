@@ -23,6 +23,18 @@ public class StudentController {
     @GetMapping("/random-create")
     public Object randomCreateStudent(String name){
 
+        int count = 0;
+        while (true){
+            try {
+                Thread.sleep(1000);
+                if (count++ > 4) {
+                    break;
+                }
+                log.info(Thread.currentThread().getName()+"-----count==" + count);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
         Student student = new Student();
         student.setId(System.currentTimeMillis())

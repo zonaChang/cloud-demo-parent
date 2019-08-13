@@ -27,6 +27,7 @@
         <module>eureka-consumer</module>
         <module>zuul</module>
         <module>project-basic</module>
+        <module>function-test</module>
     </modules>
 
     <dependencies>

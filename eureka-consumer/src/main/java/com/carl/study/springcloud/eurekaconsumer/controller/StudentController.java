@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author changez
  * @desc
@@ -16,11 +18,13 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class StudentController {
 
-    @Autowired
+//    @Autowired
+    @Resource
     private StudentFeign studentFeign;
 
     @GetMapping("/generate-student")
     public Object generateStudent(String name){
+        log.info("start invoke provider");
         Student student = studentFeign.generageRandomStudent(name);
         log.info("consumer----generateStudent, result={}", student);
         return student;

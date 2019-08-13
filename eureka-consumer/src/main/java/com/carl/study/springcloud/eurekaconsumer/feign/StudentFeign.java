@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * feign调用, 参数前面不指定@RequestParam或@RequestBody时, 默认为@RequestBody
  * @datetime 2019/8/12 17:52
  */
+// @FeignClient 注解中有一个primary属性,该值为true, 所以配合hystrix时, 虽然有两个StudentFeign类型的bean在ioc中, 依然可以准确注入
 @FeignClient(value = "cloud-eureka-provider", fallback = StudentFeignHystrix.class)
 public interface StudentFeign {
 
