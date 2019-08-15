@@ -15,7 +15,7 @@ public class StudentFeignHystrix implements StudentFeign {
     @Override
     public Student generageRandomStudent(String name) {
         log.error("error---generageRandomStudent======111111");
-        return null;
+        return new Student().setName("error xxx");
     }
 
     @Override
