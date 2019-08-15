@@ -1,6 +1,6 @@
 ===============参考资料=================
 https://projects.spring.io/spring-cloud/spring-cloud.html#_prefer_ip_address
-
+spring security: https://www.jianshu.com/p/2de9f4675026
 ===============配置参考类=================
 com.netflix.client.config.CommonClientConfigKey
 org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean
