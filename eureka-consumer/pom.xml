@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <!--<parent>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
-        <!--<version>2.1.7.RELEASE</version>-->
-        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    <!--<groupId>org.springframework.boot</groupId>-->
+    <!--<artifactId>spring-boot-starter-parent</artifactId>-->
+    <!--<version>2.1.7.RELEASE</version>-->
+    <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     <!--</parent>-->
     <parent>
         <groupId>com.carl.study.springcloud</groupId>
@@ -57,6 +57,11 @@
             <groupId>com.carl.study.springcloud</groupId>
             <artifactId>project-basic</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <!--<version>4.6.0</version>-->
+        </dependency>
     </dependencies>
 
     <build>
@@ -69,6 +74,14 @@
                     <fork>true</fork>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
+                <!-- 解决java找不到主类的问题 -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
