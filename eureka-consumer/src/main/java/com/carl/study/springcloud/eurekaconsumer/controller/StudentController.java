@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.UUID;
 
 /**
  * @author changez
@@ -46,5 +47,14 @@ public class StudentController {
     public Object errorTimeOut(){
         Object obj = studentFeign.errorTimeOut();
         return obj;
+    }
+
+    @GetMapping("/exception")
+    public Object exception(Integer id){
+        if (id != null) {
+            return UUID.randomUUID().toString();
+        }
+        int a = 3/0;
+        return "exception";
     }
 }
